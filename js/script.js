@@ -29,3 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById('travelForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Show success message
+        successMessage.classList.remove('hidden');
+        
+        // Optionally, clear the form
+        form.reset();
+    });
+});
